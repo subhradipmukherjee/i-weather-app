@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <ion-title><ion-icon  name="information-circle" isActive="true" style="margin-top: 1%;margin-right: 2%;"></ion-icon>weather</ion-title>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background: #6495ed;">
+  <ion-grid >
+    <ion-row>
+      <ion-col width-100>
+        <ion-list style="margin-top: 50%;">
+          <form (ngSubmit)="saveform()" >
+           <ion-item>
+            <ion-label fixed>
+              City
+            </ion-label>
+            <ion-input [(ngModel)]="city" name="city" type="text"></ion-input>
+           </ion-item>
+           <ion-item>
+            <ion-label fixed>
+              Country
+            </ion-label>
+            <ion-input [(ngModel)]="country" name="country" type="text"></ion-input>
+           </ion-item>
+           <button ion-button type="submit" block>save changes</button>
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

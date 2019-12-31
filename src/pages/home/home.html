@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title><ion-icon  name="information-circle" isActive="true" style="margin-top: 1%;margin-right: 2%;"></ion-icon>weather</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home" no-bounce>
+<ion-grid *ngIf="weather" style="display: inline-block;margin-top: 1%;">
+  <ion-row>
+    <ion-col>
+     <p class="location">{{weather.name}},{{weather.sys.country}}</p>
+      </ion-col>
+      <ion-col>
+        <img src="assets/gallery/img5.png" class="cld">
+      </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col >
+      <p class="temp">{{weather.main.temp}}&deg;</p>
+      </ion-col>
+    <ion-col>
+      <p class="desc">{{weather.weather[0].description}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col width-100>
+     <ion-list>
+       <ion-item style="background: rgba(100,149,237,1);">
+        <ion-icon md="md-thermometer" name="thermometer" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 8%;">Feels Like:  {{weather.main.feels_like}}&deg;</strong>
+       </ion-item>
+       <ion-item >
+        <ion-icon  name="remove-circle" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">Min-Temp: {{weather.main.temp_min}}&deg;</strong>
+      </ion-item>
+      <ion-item style="background: rgba(100,149,237,1);">
+        <ion-icon  name="add-circle" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">Max-Temp: {{weather.main.temp_max}}&deg;</strong>
+      </ion-item>
+      <ion-item >
+        <ion-icon  name="umbrella" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">Humidity: {{weather.main.humidity}}</strong>
+      </ion-item>
+      <ion-item style="background: rgba(100,149,237,1);">
+        <ion-icon  name="cloud" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">Pressure: {{weather.main.pressure}}</strong>
+      </ion-item>
+      <ion-item >
+        <ion-icon name="leaf" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 8%;">Wind Speed: {{weather.wind.speed}}</strong>
+      </ion-item>
+      <ion-item style="background: rgba(100,149,237,1);">
+        <ion-icon  name="cloudy" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">Clouds: {{weather.clouds.all}}</strong>
+      </ion-item>
+      <ion-item >
+        <ion-icon  name="compass" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">Latitude: {{weather.coord.lat}}</strong>
+      </ion-item>
+      <ion-item style="background: rgba(100,149,237,1);">
+      <ion-icon  name="compass" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">Longitude: {{weather.coord.lon}}</strong>
+    </ion-item>
+     </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-grid> 
+
+</ion-content>

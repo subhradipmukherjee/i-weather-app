@@ -1,0 +1,197 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <ion-title><ion-icon  name="information-circle" isActive="true" style="margin-top: 1%;margin-right: 2%;"></ion-icon>weather</ion-title>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+  
+  <ion-grid *ngIf="weather" style="display: inline-block;">
+    <h2 style="text-align: center;">{{weather.city.name}}</h2>
+   <ion-list>
+    <ion-item >
+      <ion-label style="color:black;">
+        <ion-row>
+          <ion-col style="text-align: end;">
+            <ion-icon name="remove-circle" style="margin-left: 14%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[0].main.temp_min}}&deg;</strong>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align: left;">
+            <ion-icon name="time" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[0].dt_txt}}</strong>
+          </ion-col>
+          <ion-col style="text-align:center;">
+            <strong>{{weather.list[0].weather[0].description}}</strong>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align: end;">
+            <ion-icon name="add-circle" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[0].main.temp_max}}&deg;</strong>
+          </ion-col>
+        </ion-row>
+        </ion-label>
+        <ion-select submitText="Okay" cancelText=" ">
+          <ion-option ><strong>{{weather.list[1].dt_txt}}   {{weather.list[1].main.temp}}&deg;</strong></ion-option>
+        </ion-select>
+    </ion-item>
+   <ion-item>
+      <ion-label style="color:black;">
+      <ion-row>
+        <ion-col style="text-align: end;">
+          <ion-icon name="remove-circle" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[2].main.temp_min}}&deg;</strong>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="text-align: left;">
+          <ion-icon name="time" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[2].dt_txt}}</strong>
+        </ion-col>
+        <ion-col style="text-align:center;">
+        <strong>{{weather.list[2].weather[0].description}}</strong>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="text-align: end;">
+          <ion-icon name="add-circle" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[2].main.temp_max}}&deg;</strong>
+        </ion-col>
+      </ion-row>
+      </ion-label>
+      <ion-select submitText="Okay" cancelText=" ">
+        <ion-option ><strong>{{weather.list[3].dt_txt}}  {{weather.list[3].main.temp}}&deg;</strong></ion-option>
+        <ion-option ><strong>{{weather.list[4].dt_txt}}  {{weather.list[4].main.temp}}&deg;</strong></ion-option>
+        <ion-option ><strong>{{weather.list[5].dt_txt}}  {{weather.list[5].main.temp}}&deg;</strong></ion-option>
+        <ion-option ><strong>{{weather.list[6].dt_txt}}  {{weather.list[6].main.temp}}&deg;</strong></ion-option>
+        <ion-option ><strong>{{weather.list[7].dt_txt}}  {{weather.list[7].main.temp}}&deg;</strong></ion-option>
+        <ion-option ><strong>{{weather.list[8].dt_txt}}  {{weather.list[8].main.temp}}&deg;</strong></ion-option>
+        <ion-option ><strong>{{weather.list[9].dt_txt}}  {{weather.list[9].main.temp}}&deg;</strong></ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label style="color:black;">
+        <ion-row>
+          <ion-col style="text-align: end;">
+            <ion-icon name="remove-circle" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[10].main.temp_min}}&deg;</strong>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align: left;">
+            <ion-icon name="time" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[10].dt_txt}}</strong>
+          </ion-col>
+          <ion-col style="text-align:center;">
+          <strong>{{weather.list[10].weather[0].description}}</strong>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align: end;">
+            <ion-icon name="add-circle" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[10].main.temp_max}}&deg;</strong>
+          </ion-col>
+        </ion-row>
+        </ion-label>
+        <ion-select submitText="Okay" cancelText=" ">
+        <ion-option >{{weather.list[11].dt_txt}}  {{weather.list[11].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[12].dt_txt}}  {{weather.list[12].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[13].dt_txt}}  {{weather.list[13].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[14].dt_txt}}  {{weather.list[14].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[15].dt_txt}}  {{weather.list[15].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[16].dt_txt}}  {{weather.list[16].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[17].dt_txt}}  {{weather.list[17].main.temp}}&deg;</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label style="color:black;">
+        <ion-row>
+          <ion-col style="text-align: end;">
+            <ion-icon name="remove-circle" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[18].main.temp_min}}&deg;</strong>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align: left;">
+            <ion-icon name="time" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[18].dt_txt}}</strong>
+          </ion-col>
+          <ion-col style="text-align:center;">
+          <strong>{{weather.list[18].weather[0].description}}</strong>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align: end;">
+            <ion-icon name="add-circle" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[18].main.temp_max}}&deg;</strong>
+          </ion-col>
+        </ion-row>
+        </ion-label>
+        <ion-select submitText="Okay" cancelText=" ">
+        <ion-option >{{weather.list[19].dt_txt}}  {{weather.list[19].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[20].dt_txt}}  {{weather.list[20].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[21].dt_txt}}  {{weather.list[21].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[22].dt_txt}}  {{weather.list[22].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[23].dt_txt}}  {{weather.list[23].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[24].dt_txt}}  {{weather.list[24].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[25].dt_txt}}  {{weather.list[25].main.temp}}&deg;</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label style="color:black;">
+        <ion-row>
+          <ion-col style="text-align: end;">
+            <ion-icon name="remove-circle" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[26].main.temp_min}}&deg;</strong>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align: left;">
+            <ion-icon name="time" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[26].dt_txt}}</strong>
+          </ion-col>
+          <ion-col style="text-align:center;">
+          <strong>{{weather.list[26].weather[0].description}}</strong>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align: end;">
+            <ion-icon name="add-circle" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[26].main.temp_max}}&deg;</strong>
+          </ion-col>
+        </ion-row>
+        </ion-label>
+        <ion-select submitText="Okay" cancelText=" ">
+          <ion-option >{{weather.list[27].dt_txt}}  {{weather.list[27].main.temp}}&deg;</ion-option>
+          <ion-option >{{weather.list[28].dt_txt}}  {{weather.list[28].main.temp}}&deg;</ion-option>
+          <ion-option >{{weather.list[29].dt_txt}}  {{weather.list[29].main.temp}}&deg;</ion-option>
+          <ion-option >{{weather.list[30].dt_txt}}  {{weather.list[30].main.temp}}&deg;</ion-option>
+          <ion-option >{{weather.list[31].dt_txt}}  {{weather.list[31].main.temp}}&deg;</ion-option>
+          <ion-option >{{weather.list[32].dt_txt}}  {{weather.list[32].main.temp}}&deg;</ion-option>
+          <ion-option >{{weather.list[33].dt_txt}}  {{weather.list[33].main.temp}}&deg;</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label style="color:black;">
+        <ion-row>
+          <ion-col style="text-align: end;">
+            <ion-icon name="remove-circle" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[34].main.temp_min}}&deg;</strong>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align: left;">
+            <ion-icon name="time" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[34].dt_txt}}</strong>
+
+          </ion-col>
+          <ion-col style="text-align:center;">
+          <strong>{{weather.list[34].weather[0].description}}</strong>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align: end;">
+            <ion-icon name="add-circle" style="margin-left: 2%;"></ion-icon><strong style="margin-left: 5%;">{{weather.list[34].main.temp_max}}&deg;</strong>
+          </ion-col>
+        </ion-row>
+        </ion-label>
+        <ion-select submitText="Okay" cancelText=" ">
+        <ion-option >{{weather.list[35].dt_txt}}  {{weather.list[35].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[36].dt_txt}}  {{weather.list[36].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[37].dt_txt}}  {{weather.list[37].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[38].dt_txt}}  {{weather.list[38].main.temp}}&deg;</ion-option>
+        <ion-option >{{weather.list[39].dt_txt}}  {{weather.list[39].main.temp}}&deg;</ion-option>
+        
+        
+        </ion-select>
+    </ion-item>
+  </ion-list>
+ </ion-grid>
+</ion-content>

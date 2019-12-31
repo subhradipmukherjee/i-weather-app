@@ -1,0 +1,41 @@
+.home{
+    background:color($colors, primary);
+    color:color($colors, light);
+    margin-top:30px;
+    overflow-y: hidden;
+
+}
+
+.toolbar-title{
+    text-align: center;
+}
+
+.tabs-md, .tab-button-icon{
+    color:#ccc;
+}
+
+.temp{
+    font-size: 50px;
+    text-align: left;
+    font-weight: normal;
+    margin-top: -27%;
+    
+}
+
+.location{
+    font-size:20px;
+    text-align: left;
+    
+}
+.desc{
+    font-size:18px;
+    text-align: right;
+    margin-top: -7%;
+    margin-right: 22%;
+    color: white;
+    margin-left: 20%;
+
+}
+.cld{
+    margin-top: -15%;
+}
